@@ -1,54 +1,65 @@
-# React + TypeScript + Vite
+# Kayzen - Personalized Life Navigator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Kayzen is a data-driven personal assistant designed to help you optimize tasks, time, energy and finances. Inspired by the philosophy of _Kaizen_, it focuses on small improvements each day to support continuous growth.
 
-Currently, two official plugins are available:
+## Vision & Principles
+- **Personalized decisions** powered by your actual habits and data
+- **Dynamic prioritization** considering urgency, context and capacity
+- **Sustainable workload** that balances effort and prevents burnout
+- **Continuous learning** from every interaction and feedback
+- **Collaborative growth** between you and the system
+- **Holistic life management** across tasks, energy, time and finances
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Key Concepts
+- **Duration & Effort**: estimates vs. actual for each task
+- **Energy Level**: subjective feeling before/after work
+- **Randomness Events**: intentional or unexpected deviations from plan
+- **Financial Obligations**: recurring or one‑time payments
 
-## Expanding the ESLint configuration
+## Features
+### Task Lifecycle
+1. Define tasks with name, category, due date, estimated duration and effort
+2. Start, pause and complete tasks while Kayzen logs actual duration automatically
+3. Provide post‑completion feedback on effort, energy and interruptions
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Activity Tracking
+- Kayzen computes actual duration, compares estimates, and learns recurrence patterns
+- Logging randomness events helps understand the impact of spontaneous actions
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### Intelligent Prioritization
+- Suggests **Next Best Action** based on deadlines, effort, energy, and context
+- Balances workload over days and weeks to prevent overload
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Learning & Growth
+- Daily/weekly summaries highlight time spent, estimation accuracy and randomness impact
+- Progress tracking shows trends in task completion and energy management
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Financial Management
+- Track recurring obligations and income
+- Project future financial status and answer "Can I afford X?" queries
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## User Experience
+- Dashboard shows 3 recommended tasks, energy level and financial snapshot
+- Task creation and randomness logging use simple, button‑driven flows
+- Visual reports provide quick insights without complex data tables
+
+## External Integrations
+- **Telegram bot** reminders for upcoming tasks and obligations
+- **Google Calendar** event scheduling
+- Future phases may connect to financial APIs for bank data
+
+## Architecture
+- **Frontend**: React + TypeScript (Vite) — this repository
+- **Backend**: FastAPI deployed on Vercel
+- **Database**: MongoDB Atlas
+- **Frontend hosting**: Render
+
+Security best practices include OAuth 2.0 for Google, secure token storage for Telegram and end‑to‑end encryption for all data.
+
+## Future Enhancements
+- Natural language input for tasks and expenses
+- Cross‑device sync and collaborative features
+- Gamification and deeper biometric integrations
+- Direct bank connections and advanced budgeting
+
+Kayzen aims to be your partner for continuous improvement, helping you navigate daily tasks, energy levels and finances with clarity and confidence.
